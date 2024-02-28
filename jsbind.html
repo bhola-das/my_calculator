@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>click me</button>
+    <button id="green">green</button>
+    <button id="red">red</button>
+</body>
+<script>
+    class user{
+        constructor()
+        {
+            this.liberary="react bhola"
+            this.server="https://localhost 300"
+
+            document.querySelector('button').addEventListener('click',this.handleclick.bind(this))
+        }
+       handleclick()
+       {
+        console.log(this.liberary);
+        console.log(this.server);
+       }
+    }
+
+    const bh =new user();
+</script>
+<script>
+    //first way
+    //document.getElementById('green').onclick=function()
+    //{
+    //    document.body.style.backgroundColor='green';
+    //}
+    //document.getElementById('red').onclick=function()
+    //{
+    //    document.body.style.backgroundColor='red';
+    //}
+
+
+//second way
+    function clickhandler(color)
+    {
+        return function()
+        {
+            document.body.style.backgroundColor=`${color}`
+        }
+      
+    }
+document.getElementById('green').onclick=clickhandler('green')
+document.getElementById('red').onclick=clickhandler('red')
+</script>
+
+</html>

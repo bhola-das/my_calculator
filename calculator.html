@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>
+
+        </title>
+        <style>
+            table{
+                margin:auto;
+                background:darkgray;
+            }
+            table tr td{
+                padding:10px;
+            }
+            table button{
+                width:40px;
+                height:40px;
+                border:none;
+                background:blue;
+                color:white;
+                border-radius:50%;
+            }
+            table input{
+                width:95%;
+                height:30px;
+                border-radius:10%;
+                padding-right:10px;
+                text-align:right;
+            }
+        </style>
+        <script >
+            function storedata(x)
+            {
+            var txtinput=document.getElementById('txtinpu');//pass value in input 
+            var olddata=txtinput.value;
+            var t=olddata.length;
+            var lastchar=olddata[t-1];
+            
+            var oprsym=["+","-","*","/","."];
+            if(oprsym.includes(x))
+            {
+                if(oprsym.includes(lastchar))
+                {
+                    var removelast=olddata.slice(0,-1);
+                    txtinput.value=removelast+x;
+                }
+                else{
+                    txtinput.value=olddata+x; //here + is use concate number
+                }
+            }
+            else{
+                txtinput.value=olddata+x;
+            }
+            }
+            function calculate()
+            {
+                var txtinput=document.getElementById('txtinpu');
+                var olddata=eval(txtinput.value);
+                txtinput.value=olddata
+            }
+            function clsdata()
+            {
+                document.getElementById('txtinpu').value='';
+            }
+
+        </script>
+    </head>
+    <body>
+        <table border="1">
+        <tr>
+            <td><button onclick="clsdata()">C</button></td>
+            <td colspan="3"><input placeholder="Enter value" type="text" style="color:red" id="txtinpu"/></td>
+        </tr>
+        <tr>
+            <td><button onclick="storedata('+')">+</button></td>
+            <td><button onclick="storedata('1')">1</button></td>
+            <td><button onclick="storedata('2')">2</button></td>
+            <td><button onclick="storedata('3')">3</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="storedata('-')">-</button></td>
+            <td><button onclick="storedata('4')">4</button></td>
+            <td><button onclick="storedata('5')">5</button></td>
+            <td><button onclick="storedata('6')">6</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="storedata('*')">*</button></td>
+            <td><button onclick="storedata('7')">7</button></td>
+            <td><button onclick="storedata('8')">8</button></td>
+            <td><button onclick="storedata('9')">9</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="storedata('/')">/</button></td>
+            <td><button onclick="storedata('.')">.</button></td>
+            <td><button onclick="storedata('0')">0</button></td>
+            <td><button onclick="calculate()">=</button></td>
+        </tr>
+        </table>
+    </body>
+</html>

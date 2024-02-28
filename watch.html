@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<style>
+    body{
+    margin:0;
+    padding:0;
+    background-color:grey;
+}
+.center{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#watch{
+    font-size: 50px;
+    background-color: aquamarine;
+    padding: 20px 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+</style>
+</head>
+<body>
+    <div class="center">
+        <div><span style="font-size:30px;color:crimson">your local time</span></div>
+        <div id="watch">
+
+        </div>
+
+    </div>
+</body>
+<script>
+//const clock=document.getElementById('watch')
+const clock=document.querySelector('#watch')
+setInterval(function(){
+    let date=new Date();
+    clock.innerHTML=date.toLocaleTimeString();
+},1000);
+</script>
+</html>
