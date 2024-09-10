@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+        <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(218, 214, 214);
+}
+.container {
+  width: 450px;
+  padding: 3em;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  box-shadow: -7px -7px 10px white, 5px 5px 10px rgba(0, 0, 0, 0.585);
+}
+h1 {
+  font-size: 2.7rem;
+}
+.icons {
+  display: flex;
+  gap: 1em;
+}
+.icon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  box-shadow: -5px -5px 10px white, 5px 5px 15px rgba(0, 0, 0, 0.485);
+  border-radius: 100%;
+  font-size: 1.8rem;
+}
+input {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  background-color: rgb(218, 214, 214);
+  box-shadow: inset -5px -5px 10px white,
+    inset 5px 5px 10px rgba(0, 0, 0, 0.485);
+}
+button {
+  display: inline-block;
+  width: 11rem;
+  height: 3.2rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-radius: 25px;
+  box-shadow: -5px -5px 10px white, 5px 5px 10px rgba(0, 0, 0, 0.485);
+  background-color: rgb(218, 214, 214);
+  border: none;
+  cursor: pointer;
+}
+        </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sign In</h1>
+            <div class="icons">
+              <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+              <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+              <div class="icon"><i class="fa-brands fa-google"></i></div>
+            </div>
+            <p>or use your account</p>
+            <input type="text" placeholder="Email" />
+            <input type="password" placeholder="password" />
+            <button>Sign In</button>
+          </div>
+    </body>
+</html>

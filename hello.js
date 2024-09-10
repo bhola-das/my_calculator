@@ -1,3 +1,4 @@
+//Netscape developed JavaScript and was created by Brenden Eich in the year of 1995
 console.log('hello world');
 var myage='bhola@2021';
 console.log(myage);
@@ -24,9 +25,11 @@ console.log("true" + "false"); //truefalse
 console.log("bhola" - "das");  //NAN
 //nan is not a number it is property of global object
  
-// diff b/w null and undefined :if we gine null value of any data type then that is null and if we only define the the variable not initialize and we want to print
+// diff b/w null and undefined :if we give null value of any data type then that is null and if we only define the the variable not initialize and we want to print
 //then it give undefined
-
+//Undefined: It occurs when a variable is declare but not assign any value. Undefined is not a keyword.
+//Undeclared: It occurs when we try to access any variable which is not initialize or declare earlier using the var or const keyword.
+// If we use ‘typeof’ operator to get the value of an undeclare variable, we will face the runtime error with the return value as “undefined”. The scope of the undeclare variables is always global
 var v=null;
 console.log(typeof(v));//object it is laso bug
 
@@ -52,11 +55,11 @@ console.log(isNaN(mynumber));//true
 console.log("\n");
 var num1=5;
 var num2='5';
-console.log(num1==num2);
+console.log(num1==num2); //true ,it only check value means value is equal or not
 
 var num1=5;
 var num2='5';
-console.log(num1===num2);
+console.log(num1===num2);//false it check value with their datatype
 //diff is that == only check value but === also check data type
 
 var num=9;
@@ -142,12 +145,12 @@ for(var i=0;i<arr1.length;i++)
 
 for(let element in arr1)//for..in loop
 {
-    console.log(element);
+    console.log(element); // 0 1 2 3
 }
 
 for(let element of arr1)//for..of loop
 {
-    console.log(element);
+    console.log(element);// bhola ,sujeet, 9 7
 }
 
 //for each loop  element is value, index ,and arrayp tell from which array we work
@@ -164,7 +167,7 @@ array1.forEach((element,index,arrayp)=>{
 });
 
 //searching and filter in an array
-//indexof()  if element not found then index of return -1
+//indexof()  it return the index of element ,if element not found then indexof return -1
 const nums=['bhola','sujjj','navo']
 const index=nums.indexOf('navo');
 console.log(index);
